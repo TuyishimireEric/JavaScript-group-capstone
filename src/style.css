@@ -1,0 +1,90 @@
+/* stylelint-disable font-family-no-missing-generic-family-keyword */
+/* stylelint-disable declaration-block-semicolon-newline-after */
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins';
+}
+
+body {
+  background-image: url('./images/wll.jpg');
+  background-size: contain;
+  background-attachment: fixed;
+}
+
+header {
+  width: 100%;
+  display: flex;
+  height: 6vw;
+  background-color: rgba(15, 13, 10, 0.915);
+  position: fixed;
+  padding: 4px 4%;
+  justify-content: space-between;
+}
+
+.title {
+  color: rgb(180, 228, 91);
+  font-size: 2.5vw;
+  font-weight: 700;
+}
+
+.tab a {
+  text-decoration: none;
+  color: rgb(180, 228, 91);
+}
+
+.main {
+  padding-top: 10vw;
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  gap: 6px;
+  justify-content: center;
+  margin: 2px 9%;
+}
+
+.serie {
+  background-color: rgba(15, 13, 10, 0.795);
+  padding: 20px;
+  font-size: 1.3vw;
+  color: rgb(180, 228, 91);
+  text-align: center;
+  transition: all .2s ease-in-out; 
+}
+
+.serie:hover {
+  transform: scale(1.1);
+}
+
+.pic {
+  border: 1px solid rgb(180, 228, 91);;
+}
+
+.fa {
+  transition: all .2s ease-in-out; 
+}
+
+.fa:hover {
+  transform: scale(1.03);
+  color: rgb(180, 96, 70);
+}
+
+.fa:active {
+  transform: scale(1.03);
+  color: rgb(180, 96, 70);
+}
+
+.name {
+  display: flex;
+  justify-content: space-between;
+}
+
+.comment {
+  background-color: rgb(180, 228, 91);
+  color: black;
+  border: none;
+  padding: 4px;
+  width: 10vw;
+  height: 2vw;
+  border-top-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
