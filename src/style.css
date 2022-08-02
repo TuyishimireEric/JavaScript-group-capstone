@@ -45,7 +45,7 @@ hr {
 
 .tab a {
   text-decoration: none;
-  transition: all .2s ease-in-out;
+  transition: all 0.2s ease-in-out;
 }
 
 .tab a:hover {
@@ -71,7 +71,7 @@ hr {
   padding: 20px;
   font-size: 1.3vw;
   color: rgb(180, 228, 91);
-  transition: all .2s ease-in-out;
+  transition: all 0.2s ease-in-out;
   display: flex;
   flex-direction: column;
   gap: 12px;
@@ -102,18 +102,19 @@ hr {
   position: absolute;
   border-radius: 4em;
   left: 0;
-  top:0;
+  top: 0;
   width: 100%;
   height: 100%;
   transition: all 0.5s;
   transform: scale(1.2);
 }
+
 .fa:active::after {
   box-shadow: 0 0 0 0 rgb(180, 228, 91);
   position: absolute;
   border-radius: 4em;
   left: 0;
-  top:0;
+  top: 0;
   opacity: 1;
   transition: 0s;
 }
