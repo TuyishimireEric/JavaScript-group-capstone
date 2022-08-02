@@ -4,6 +4,7 @@
   margin: 0;
   padding: 0;
   font-family: 'Poppins';
+  color: rgb(180, 228, 91);
 }
 
 body {
@@ -18,8 +19,9 @@ header {
   height: 6vw;
   background-color: rgba(15, 13, 10, 0.915);
   position: fixed;
-  padding: 4px 4%;
-  justify-content: space-between;
+  padding: 4px 10%;
+  gap: 28vw;
+  align-items: center;
 }
 
 .title {
@@ -28,9 +30,31 @@ header {
   font-weight: 700;
 }
 
+.nav {
+  list-style-type: none;
+  color: rgb(180, 228, 91);
+  display: flex;
+  gap: 1.2vw;
+  align-items: center;
+}
+
+hr {
+  height: 20px;
+  border: 1px solid rgb(180, 228, 91);
+}
+
 .tab a {
   text-decoration: none;
-  color: rgb(180, 228, 91);
+  transition: all .2s ease-in-out;
+}
+
+.tab a:hover {
+  color: rgb(215, 235, 178);
+  transform: scale(1.1);
+}
+
+.tab:hover {
+  border-bottom: 1px solid rgb(180, 228, 91);
 }
 
 .main {
@@ -47,8 +71,10 @@ header {
   padding: 20px;
   font-size: 1.3vw;
   color: rgb(180, 228, 91);
-  text-align: center;
-  transition: all .2s ease-in-out; 
+  transition: all .2s ease-in-out;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
 }
 
 .serie:hover {
@@ -56,21 +82,40 @@ header {
 }
 
 .pic {
-  border: 1px solid rgb(180, 228, 91);;
+  border: 1px solid rgb(180, 228, 91);
 }
 
 .fa {
-  transition: all .2s ease-in-out; 
+  position: relative;
+  transition-duration: 0.4s;
+  -webkit-transition-duration: 0.4s;
 }
 
 .fa:hover {
-  transform: scale(1.03);
-  color: rgb(180, 96, 70);
+  transition-duration: 0.1s;
+  color: #ffdfdf;
+  transform: scale(1.2);
 }
 
-.fa:active {
-  transform: scale(1.03);
-  color: rgb(180, 96, 70);
+.fa::after {
+  content: "";
+  position: absolute;
+  border-radius: 4em;
+  left: 0;
+  top:0;
+  width: 100%;
+  height: 100%;
+  transition: all 0.5s;
+  transform: scale(1.2);
+}
+.fa:active::after {
+  box-shadow: 0 0 0 0 rgb(180, 228, 91);
+  position: absolute;
+  border-radius: 4em;
+  left: 0;
+  top:0;
+  opacity: 1;
+  transition: 0s;
 }
 
 .name {
@@ -80,7 +125,9 @@ header {
 
 .comment {
   background-color: rgb(180, 228, 91);
+  align-self: center;
   color: black;
+  font-weight: bold;
   border: none;
   padding: 4px;
   width: 10vw;
