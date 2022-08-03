@@ -1,19 +1,14 @@
 import './style.css';
 
+const body = document.querySelector('body');
+const modalContent = document.querySelector('.content');
+const modal = document.getElementById('myModal');
+
 const getSeries = async () => {
   const response = await fetch('https://api.tvmaze.com/shows/1/episodes');
   const series = await response.json();
   return series;
 };
-let popup = document.getElementById("popup");
-
-function openpopup(){
-    popup.classList.add("open-popup")
-}
-
-function closepopup(){
-    popup.classList.remove("open-popup")
-}
 
 const showSeries = async () => {
   const series = await getSeries();
@@ -24,28 +19,7 @@ const showSeries = async () => {
     episodes.innerHTML = `
       <img class="pic" src="${series.image.medium}" alt="${series.name}">
       <p class="name">${series.name}  <i class="fa fa-heart"></i></P>
-      <button type="submit" class="comment" onclick="openpopup()">Comment</button>
-
-      <div class="popup" id="popup">
-      <div class="modal-header">
-        <img src="${series.image.medium}" alt="${series.name}" class="modal-img">
-        <button type="button" class="close" onclick="closepopup()" aria-label="Close"><span aria-hidden="true">×</span>
-      </button>
-      </div>
-      <div class="modal-body">
-      <h3 class="text-center">Thor: Love and Thunder</h3>
-        <div class="text-center">
-          <p>After his retirement is interrupted by Gorr the God Butcher, a galactic killer who seeks the extinction of the gods, Thor enlists the help of King Valkyrie, Korg, and ex-girlfriend Jane Foster, who now inexplicably wields Mjolnir as the Mighty Thor. Together they embark upon a harrowing cosmic adventure to uncover the mystery of the God Butcher’s vengeance and stop him before it’s too late.</p>
-        </div>
-        <ul class="comments-container"></ul>
-        <p class="comments-counter" id="616037">0 comments</p>
-        <form class="form-group form-control p-4 comment-form">
-          <input type="text" placeholder="Your name" class="form-group form-control" id="name">
-          <textarea class="form-control form-group" placeholder="Your Comment" style="height: 120px;" id="added-comment"></textarea>
-          <button type="button" class="comment" id="616037">Comment</button>
-        </form>
-      </div>
-    </div>
+      <button type="submit" class="comment" id="${series.id}">Comment</button>
       `;
     list.appendChild(episodes);
   });
@@ -53,3 +27,57 @@ const showSeries = async () => {
 
 document.addEventListener('DOMContentLoaded', showSeries);
 
+const getDataFromApi = (id) => {
+  // getCommentItems(id);
+  getSeries().then((data) => {
+    data.forEach((series) => {
+      if (series.id.toString() === id.toString()) {
+        modalContent.innerHTML = `
+            <div class="modalContent">
+                <div class="part1">
+                    <img class="original" src="${series.image.original}" alt="">
+                    <div class="text">
+                      <h1 class="text-title">${series.name}</h1>
+                      <p class="language">${series.summary}</p>
+                    </div>
+                </div>
+                <div class="part2">
+                  <div class="comment-top">
+                    <p class="comment-title">Comments</p>
+                    <span class="close">&times;</span>
+                  </div>
+                  <div class="comment-section">
+                    <input type="text" name="name" id="name" placeholder="Name">
+                    <input type="e-mail" name="name" id="email" placeholder="E-mail">
+                    <textarea type="text" name="commentText" id="commentText" placeholder="Comments..."></textarea>
+                    <button class="comment">Add Comments</button>
+                  </div>
+                  <div class="comment-list"></div>
+                </div>
+                  
+              </div>
+            `;
+      }
+    });
+  });
+};
+
+body.addEventListener('click', (e) => {
+  if (e.target.className === 'comment') {
+    modal.style.display = 'block';
+    getDataFromApi(e.target.id);
+  }
+  if (e.target.className === 'close') {
+    modal.style.display = 'none';
+  }
+  if (e.target === modal) {
+    modal.style.display = 'none';
+  }
+  // if (e.target.className === 'far fa-heart likes') {
+  //   addLikes(e.target.id);
+  // }
+  // if (e.target.className === 'add-comments') {
+  //   const value = { name: document.querySelector('#name').value, text: document.querySelector('#commentText').value, id: document.querySelector('#id').value };
+  //   postItem(value);
+  // }
+});

@@ -86,7 +86,6 @@ hr {
 }
 
 .fa {
-  position: relative;
   transition-duration: 0.4s;
   -webkit-transition-duration: 0.4s;
 }
@@ -99,7 +98,6 @@ hr {
 
 .fa::after {
   content: "";
-  position: absolute;
   border-radius: 4em;
   left: 0;
   top:0;
@@ -135,34 +133,119 @@ hr {
   border-top-left-radius: 10px;
   border-bottom-right-radius: 10px;
 }
-.popup{
-  width: 400px;
-  background: #fff;
-  border-radius: 6px;
-  position: absolute;
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  padding-top: 100px;
+  left: 0;
   top: 0;
-  left: 50%;
-  transform: translate(-50%,-50%) scale(0.1);
-  text-align: center;
-  padding: 0 30px 30px;
-  color: #333;
-  visibility: hidden;
-  transition: transform 0.4s; top: 0.4s;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.8);
 }
-.open-popup{
-  visibility: visible;
-  top: 50;
-  transform: translate(-50%, -50%) scale(1);
+
+.modal-content {
+  margin: auto;
+  width: 80%;
 }
-.popup img{
+
+.modalContent {
+  background-color: rgba(32, 18, 18, 0.8);
+  display: flex;
+  height: auto;
+  justify-content: space-between;
+  padding: 24px;
+}
+
+.part1 {
+  width: 60%;
+}
+
+.part2 {
+  width: 35%;
+  padding: 0 24px;
+  display: flex;
+  flex-direction: column;
+}
+
+.original {
+  width: 100%;
+  border: 1px solid rgba(180, 228, 91, 0.726);
+  border-radius: 8px;
+}
+
+.text {
+  padding: 20px 40px 20px 0;
+}
+
+.text-title {
+  color: #fff;
+}
+
+.comment-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.comment-title {
+  color: #fff;
+  font-size: 1.3vw;
+  font-weight: bold;
+  margin-top: 0;
+}
+
+.close {
+  color: rgb(180, 228, 91);
+  float: right;
+  font-size: 44px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+  color: rgba(180, 228, 91, 0.493);
+  text-decoration: none;
+}
+
+.comment-list {
+  width: 100%;
+  height: 30%;
+}
+
+input {
+  color: #fff;
+  background: none;
+  font-size: 16px;
+  padding: 8px 8px 8px 5px;
   display: block;
-    border-radius: 5px;
-    width: 100%;
-    height: 100%;
+  border: none;
+  width: 100%;
+  border-bottom: 1px solid #ffaa4d;
+  margin-bottom: 18px;
 }
-.popup h3{
-  text-align: center;
-  font-size: 38px;
-  font-weight: 500 ;
-  margin: 30px 0 10px;
+
+input:focus {
+  outline: none;
+}
+
+textarea {
+  color: #fff;
+  background: none;
+  font-size: 16px;
+  padding: 10px 10px 10px 5px;
+  display: block;
+  border: none;
+  width: 100%;
+  height: 5vw;
+  border: 1px solid #ffaa4d;
+  margin: 24px 0 12px 0;
+}
+
+textarea:focus {
+  outline: none;
 }
