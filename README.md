@@ -1,6 +1,12 @@
 # JavaScript-group-capstone
-This application Web Application showcases a bunch of movie shows and comments about them 
+This a Web Application showcases a bunch of movie shows and comments about them, fetching the data from the api services
 
+##
+Link to our description video
+https://drive.google.com/drive/folders/1wtzX7u8tSCPgpJryMD9TiMrA8NoiLf1s?usp=sharing
+
+## Movie screen shot
+<img width="788" alt="moviescreenshot" src="web.png">
 ## Page Link 
 Clone and run NPM install locally then NPM run start
 http://localhost:8080/
