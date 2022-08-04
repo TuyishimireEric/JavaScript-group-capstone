@@ -1,4 +1,7 @@
 import './style.css';
+import postComment from './addComment.js';
+import fetchComments from './fetchComments.js';
+
 
 const body = document.querySelector('body');
 const modalContent = document.querySelector('.content');
@@ -46,17 +49,18 @@ const getDataFromApi = (id) => {
                     <p class="comment-title">Comments</p>
                     <span class="close">&times;</span>
                   </div>
-                  <div class="comment-section">
-                    <input type="text" name="name" id="name" placeholder="Name">
-                    <input type="e-mail" name="name" id="email" placeholder="E-mail">
-                    <textarea type="text" name="commentText" id="commentText" placeholder="Comments..."></textarea>
-                    <button class="comment">Add Comments</button>
-                  </div>
-                  <div class="comment-list"></div>
+                  <ul class="comments-container">
+                  </ul>
+                  <form class="form-group form-control p-4 comment-form">
+                    <input type="text" placeholder="Your name" class="form-group form-control" id="name">
+                    <textarea class="form-control form-group" placeholder="Your Comment" style="height: 120px;" id="added-comment"></textarea>
+                    <button type="button" class="add-comment btn btn-info" id=${id}>Comment</button>
+                  </form>
                 </div>
-                  
               </div>
-            `;
+            </div>`;
+            const submitButton = document.querySelector('.add-comment');
+            submitButton.addEventListener('click', postComment);
       }
     });
   });
@@ -76,8 +80,10 @@ body.addEventListener('click', (e) => {
   // if (e.target.className === 'far fa-heart likes') {
   //   addLikes(e.target.id);
   // }
-  // if (e.target.className === 'add-comments') {
-  //   const value = { name: document.querySelector('#name').value, text: document.querySelector('#commentText').value, id: document.querySelector('#id').value };
-  //   postItem(value);
-  // }
+  //if (e.target.className === 'comment') {
+     //const value = { name: document.querySelector('#name').value, text: document.querySelector('#commentText').value, id: document.querySelector('#id').value };
+     //postItem(value);
+   //}
 });
+
+export default index;

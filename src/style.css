@@ -198,6 +198,16 @@ hr {
   margin-top: 0;
 }
 
+.comments-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  list-style: none;
+  gap: 8px;
+  overflow-y: auto;
+  max-height: 200px;
+}
+
 .close {
   color: rgb(180, 228, 91);
   float: right;
