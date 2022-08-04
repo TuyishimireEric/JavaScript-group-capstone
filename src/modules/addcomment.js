@@ -1,8 +1,6 @@
+import { fetchComments } from './fetchComments.js';
 
-/* eslint-disable camelcase */
-import fetchComments from './fetchComments.js';
-
-const commentURL = 'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/PBhw11GTdXlueafWDmvL/comments';
+const commentURL = 'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/TDTG3sxn7jY0mfJHgG9a/comments';
 
 const postComment = async (e) => {
   e.preventDefault();
@@ -15,14 +13,14 @@ const postComment = async (e) => {
   if (name && addComment) {
     const result = await fetch(commentURL, {
       method: 'POST',
+      headers: {
+        'Content-type': 'application/json; charset=UTF-8',
+      },
       body: JSON.stringify({
         item_id: `${movieID.id}`,
         username: `${name}`,
         comment: `${addComment}`,
       }),
-      headers: {
-        'Content-type': 'application/json; charset=UTF-8',
-      },
     });
     commentForm.reset();
     await result.text();

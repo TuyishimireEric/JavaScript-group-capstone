@@ -119,6 +119,7 @@ hr {
 .name {
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 
 .comment {
@@ -132,6 +133,33 @@ hr {
   height: 2vw;
   border-top-left-radius: 10px;
   border-bottom-right-radius: 10px;
+  cursor: pointer;
+  transition: all .2s ease-in-out;
+}
+
+.comment:hover {
+  background-color: rgb(255, 255, 255);
+  color: rgb(33, 34, 30);
+  transition: all .2s ease-in-out;
+}
+
+.add-comment {
+  background-color: rgb(180, 228, 91);
+  align-self: center;
+  color: black;
+  font-weight: bold;
+  border: none;
+  padding: 3px;
+  width: 6vw;
+  height: 2vw;
+  cursor: pointer;
+  transition: all .2s ease-in-out;
+}
+
+.add-comment:hover {
+  background-color: rgb(255, 255, 255);
+  color: rgb(33, 34, 30);
+  transition: all .2s ease-in-out;
 }
 
 .modal {
@@ -258,4 +286,14 @@ textarea {
 
 textarea:focus {
   outline: none;
+}
+
+.likes {
+  color: #fff;
+  font-size: 14px;
+  margin-right: 12px;
+}
+
+.serie-name {
+  font-weight: bolder;
 }
