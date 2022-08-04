@@ -1,10 +1,10 @@
-const addCommentToDom = (comments) => {
+const addComment = (comments) => {
   const totalcomments = document.querySelector('.comment-title');
   totalcomments.insertAdjacentHTML('beforeend', `(${comments.length})`);
   const commentList = document.querySelector('.comments-container');
   commentList.innerHTML = '';
   comments.forEach((comment) => {
-    commentList.innerHTML += `<li>${comment.creation_date}: ${comment.username}: ${comment.comment}: ${comments.length}</li>`;
+    commentList.innerHTML += `<li>${comment.creation_date}: ${comment.username}: ${comment.comment}</li>`;
   });
 };
 
@@ -17,7 +17,7 @@ const fetchComments = async (id) => {
     throw new Error('No comments added for this movie');
   }
   const getComment = await response.json();
-  addCommentToDom(getComment);
+  addComment(getComment);
 };
 
 const totalComments = async (arr) => arr.length;

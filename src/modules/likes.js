@@ -12,11 +12,11 @@ const newLike = async (id) => {
   return data;
 };
 
-const getData = async (collaback) => {
+const getData = async (call) => {
   const url = 'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/TDTG3sxn7jY0mfJHgG9a/likes';
   const data = await fetch(url);
   const content = await data.json();
-  collaback(content);
+  call(content);
 };
 
 const addLikes = (id) => {
@@ -26,10 +26,10 @@ const addLikes = (id) => {
         newLike(id).then((data) => {
           if (data.status === 201) {
             getData((data) => {
-              data.forEach((val) => {
-                if (val.item_id.toString() === id.toString()) {
-                  const elem = document.getElementById(id.toString());
-                  elem.parentElement.lastElementChild.firstElementChild.textContent = val.likes;
+              data.forEach((e) => {
+                if (e.item_id.toString() === id.toString()) {
+                  const el = document.getElementById(id.toString());
+                  el.parentElement.lastElementChild.firstElementChild.textContent = e.likes;
                 }
               });
             });
