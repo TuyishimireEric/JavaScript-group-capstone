@@ -11,6 +11,8 @@ const getSeries = async () => {
 
 const showSeries = async () => {
   const series = await getSeries();
+  const totalmovies = document.querySelector('.title');
+  totalmovies.insertAdjacentHTML('beforeend', `(${series.length})`);
   const list = document.querySelector('.main');
   series.forEach((series) => {
     const episodes = document.createElement('div');
@@ -43,7 +45,7 @@ const fetchData = (id) => {
                   </div>
                   <div class="part2">
                     <div class="comment-top">
-                      <p class="comment-title">Comments (${data.length})</p>
+                      <p class="comment-title">Comments </p>
                       <span class="close">&times;</span>
                     </div>
                     <ul class="comments-container">
