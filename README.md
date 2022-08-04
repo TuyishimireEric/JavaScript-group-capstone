@@ -20,7 +20,9 @@ This is JavaScript Module capstone project, and this project is about building a
 <img width="788" alt="moviescreenshot" src="web.png">
 
 ## Page Link 
+
 [live link](https://tuyishimireeric.github.io/JavaScript-group-capstone/dist/)
+
 Clone and run NPM install locally then NPM run start
 http://localhost:8080/
 
