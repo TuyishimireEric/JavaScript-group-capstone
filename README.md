@@ -2,7 +2,7 @@
 ![](https://img.shields.io/badge/Microverse-blueviolet)
 
 # JavaScript-group-capstone
-This is JavaScript Module capstone project, and this project is about building a web application based on an external API. we have selected an API that provides data and another wich addes the comments and likes about movie series and then built the webapp around it. 
+This is JavaScript Module capstone project, and this project is about building a web application based on an external API. we have selected an API that provides data and another wich adds the comments and likes about movie series and then built the webapp around it. 
 
 ## Built With
 
