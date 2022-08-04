@@ -7,6 +7,7 @@ https://drive.google.com/drive/folders/1wtzX7u8tSCPgpJryMD9TiMrA8NoiLf1s?usp=sha
 
 ## Movie screen shot
 <img width="788" alt="moviescreenshot" src="web.png">
+
 ## Page Link 
 Clone and run NPM install locally then NPM run start
 http://localhost:8080/
