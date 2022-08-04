@@ -70,6 +70,7 @@ footer a {
   gap: 6px;
   justify-content: center;
   margin: 2px 9%;
+  min-height: 40vw;
 }
 
 .serie {
