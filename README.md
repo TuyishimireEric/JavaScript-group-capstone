@@ -23,8 +23,6 @@ This is JavaScript Module capstone project, and this project is about building a
 
 [live link](https://tuyishimireeric.github.io/JavaScript-group-capstone/dist/)
 
-Clone and run NPM install locally then NPM run start
-http://localhost:8080/
 
 ## Getting Started
 To get a local copy of this exercice, Please follow these simple example steps.
