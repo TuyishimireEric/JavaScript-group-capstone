@@ -6,12 +6,12 @@ This is JavaScript Module capstone project, and this project is about building a
 
 ## Built With
 
-• HTML, CSS 
-• JavaScript
-• VSCode
-• Webpack
-. ES6
-. API Services
+- HTML, CSS 
+- JavaScript
+- VSCode
+- Webpack
+- ES6
+- API Services
 
 ## Demo Video
 [Demonstration Video](https://drive.google.com/drive/folders/1wtzX7u8tSCPgpJryMD9TiMrA8NoiLf1s?usp=sharing)
