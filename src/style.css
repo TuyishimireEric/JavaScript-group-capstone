@@ -241,7 +241,25 @@ footer a {
   list-style: none;
   gap: 8px;
   overflow-y: auto;
+  scrollbar-width: none;
   max-height: 200px;
+  padding: 12px;
+}
+
+.all-commented {
+  margin: 6px;
+  color: rgb(180, 228, 91);
+  font-size: small;
+}
+
+.date {
+  font-style: italic;
+  font-size: smaller;
+}
+
+.commented {
+  color: #fff;
+  font-size: small;
 }
 
 .close {

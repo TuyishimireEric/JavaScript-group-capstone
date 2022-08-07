@@ -1,10 +1,10 @@
 const addComment = (comments) => {
-  const totalcomments = document.querySelector('.comment-title');
-  totalcomments.insertAdjacentHTML('beforeend', `(${comments.length})`);
+  const totalcomments = document.querySelector('.count-commments');
+  totalcomments.innerHTML = `(${comments.length})`;
   const commentList = document.querySelector('.comments-container');
   commentList.innerHTML = '';
   comments.forEach((comment) => {
-    commentList.innerHTML += `<li>${comment.creation_date}: ${comment.username}: ${comment.comment}</li>`;
+    commentList.innerHTML += `<li class="all-commented"><span class="date">${comment.creation_date}</span> ${comment.username}: <span class="commented">${comment.comment}</span></li>`;
   });
 };
 
@@ -20,6 +20,4 @@ const fetchComments = async (id) => {
   addComment(getComment);
 };
 
-const totalComments = async (arr) => arr.length;
-
-export { fetchComments, totalComments };
+export default fetchComments;

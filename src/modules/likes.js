@@ -23,17 +23,15 @@ const addLikes = (id) => {
   getSeries().then((data) => {
     data.forEach((series) => {
       if (series.id.toString() === id.toString()) {
-        newLike(id).then((data) => {
-          if (data.status === 201) {
-            getData((data) => {
-              data.forEach((e) => {
-                if (e.item_id.toString() === id.toString()) {
-                  const el = document.getElementById(id.toString());
-                  el.parentElement.lastElementChild.firstElementChild.textContent = e.likes;
-                }
-              });
+        newLike(id).then(() => {
+          getData((data) => {
+            data.forEach((e) => {
+              if (e.item_id.toString() === id.toString()) {
+                const element = document.getElementById(id.toString());
+                element.parentElement.textContent = e.likes;
+              }
             });
-          }
+          });
         });
       }
     });

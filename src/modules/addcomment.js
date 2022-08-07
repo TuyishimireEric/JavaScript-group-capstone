@@ -1,4 +1,4 @@
-import { fetchComments } from './fetchComments.js';
+import fetchComments from './fetchComments.js';
 
 const commentURL = 'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/TDTG3sxn7jY0mfJHgG9a/comments';
 

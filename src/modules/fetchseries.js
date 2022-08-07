@@ -1,5 +1,5 @@
 import postComment from './addcomment.js';
-import { fetchComments } from './fetchComments.js';
+import fetchComments from './fetchComments.js';
 
 const modalContent = document.querySelector('.content');
 
@@ -45,7 +45,7 @@ const fetchData = (id) => {
                   </div>
                   <div class="part2">
                     <div class="comment-top">
-                      <p class="comment-title">Comments </p>
+                      <p class="comment-title">Comments <span class="count-commments"></span></p>
                       <span class="close">&times;</span>
                     </div>
                     <ul class="comments-container">
