@@ -17,7 +17,9 @@ This is JavaScript Module capstone project, and this project is about building a
 [Demonstration Video](https://drive.google.com/drive/folders/1wtzX7u8tSCPgpJryMD9TiMrA8NoiLf1s?usp=sharing)
 
 ## Movie screen shot
-<img width="788" alt="moviescreenshot" src="web.png">
+![image](https://user-images.githubusercontent.com/102757126/184555024-0fe43284-b9f9-4c84-a5e4-ccf880c74b08.png)
+![image](https://user-images.githubusercontent.com/102757126/184555098-355f347a-ea86-40b8-8ea3-9a12d868b7ec.png)
+
 
 ## Page Link 
 
