@@ -10,7 +10,7 @@ This is JavaScript Module capstone project, and this project is about building a
 • JavaScript
 • VSCode
 • Webpack
-. ES6
+. ES6 Functions
 . API Services
 
 ## Demo Video
