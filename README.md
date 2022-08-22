@@ -42,15 +42,18 @@ To get a local copy of this exercice, Please follow these simple example steps.
 Now you can go and play with it as you wish :smile:
 
 ## Authors
-👤 Mark Otuya
-
-• GitHub: @markotuya0
-
-• Twitter: @mark__anthonny
 
 👤 Eric TuyishimireEric
 
-. Github: @TuyishimireEric
+- Github: [TuyishimireEric](https://github.com/TuyishimireEric)
+- LinkedIn: [Tuyishimire Eric](https://www.linkedin.com/in/tuyishimire-eric-32426b21a/)
+- Twitter: [Tuyishimire Eric](https://twitter.com/TuyishimirEric?t=86l1m656Hv_vaKXMDqYkBA&s=03)
+- E-mail: tuyishimireeric@gmail.com
+
+👤 Mark Otuya
+
+- GitHub: [markotuya0](https://github.com/markotuya0)
+- Twitter: @mark__anthonny
 
 ## Show your support
 Give a ⭐️ if you like this project!
